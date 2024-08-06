@@ -35,20 +35,20 @@ const projects = [
 <Layout>
   <Header />
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
-    <div class="flex m-10 p-6 gap-8 justify-center items-center h-96">
+    <div class="flex flex-col md:flex-row m-10 p-6 gap-8 justify-center items-center h-auto md:h-96">
       <img
-        class="w-56 h-56 rounded-full"
+        class="w-40 h-40 md:w-56 md:h-56 rounded-full shadow-md"
         src="./me.jpg"
         alt="Me Img"
       />
-      <div class="text-balance p-6">
-        <h3 class="text-3xl font-bold text-gray-100 mb-2">
+      <div class="p-6">
+        <h3 class="text-2xl md:text-3xl font-bold text-gray-100 mb-2 text-balance">
           FrontEnd Web Developer
         </h3>
-        <p class="text-2xl font-semibold text-blue-400 tracking-wide mb-4">
+        <p class="text-xl md:text-2xl font-semibold text-blue-400 tracking-wide mb-4 text-pretty">
           Hello, I'm Brayan Avila
         </p>
-        <p class="text-lg text-gray-400 mt-1">
+        <p class="text-base text-pretty md:text-balance md:text-lg text-gray-400 mt-1 ">
           I'm a FrontEnd Web Developer with experience in building websites
           using modern technologies. I specialize in creating attractive and
           functional user interfaces for websites and applications.
@@ -59,13 +59,7 @@ const projects = [
     <h1
       class="mt-6 mb-5 text-center text-3xl font-bold text-blue-400 text-opacity-50"
     >
-      My Projects
+      Projects
     </h1>
-    <div class="max-w-screen-md mx-auto grid grid-cols-3 gap-6">
-      {projects.map((project) => <Card {...project} />)}
-    </div>
-    <About />
   </main>
-
-  <Footer />
 </Layout>

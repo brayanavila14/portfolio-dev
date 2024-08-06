@@ -1,16 +1,71 @@
 ---
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import About from "../components/About.astro";
+import Footer from "../components/Footer.astro";
+import Card from "../components/Card.astro";
 
+const projects = [
+  {
+    title: "Tic tac toe",
+    description:
+      " Una versión del clásico juego de tres en raya desarrollada en React",
+    link: "https://github.com/brayanavila14/React/tree/main/projects/01-tic-tac-toe/",
+  },
+  {
+    title: "Mouse follower",
+    description:
+      "Una aplicación divertida que sigue el movimiento del mouse desarrollada en React.",
+    link: "https://github.com/brayanavila14/React/tree/main/projects/02-mouse-follower/",
+  },
+  {
+    title: "Mini E-commerce",
+    description: "Una mini tienda en línea desarrollada en React",
+    link: "https://github.com/brayanavila14/React/tree/main/projects/03-ecommerce/",
+  },
+  {
+    title: "React router prueba",
+    description: "Una aplicación de prueba para aprender a usar react router",
+    link: "https://github.com/brayanavila14/React/tree/main/projects/05-react-router/",
+  },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <Header />
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+    <div class="flex m-10 p-6 gap-8 justify-center items-center h-96">
+      <img
+        class="w-56 h-56 rounded-full"
+        src="../../public/me.jpg"
+        alt="Me Img"
+      />
+      <div class="text-balance p-6">
+        <h3 class="text-3xl font-bold text-gray-100 mb-2">
+          FrontEnd Web Developer
+        </h3>
+        <p class="text-2xl font-semibold text-blue-400 tracking-wide mb-4">
+          Hello, I'm Brayan Avila
+        </p>
+        <p class="text-lg text-gray-400 mt-1">
+          I'm a FrontEnd Web Developer with experience in building websites
+          using modern technologies. I specialize in creating attractive and
+          functional user interfaces for websites and applications.
+        </p>
+      </div>
+    </div>
+    <hr id="projects" class="border-gray-900 w-10/12 mx-auto mt-2 mb-12" />
+    <h1
+      class="mt-6 mb-5 text-center text-3xl font-bold text-blue-400 text-opacity-50"
+    >
+      My Projects
+    </h1>
+    <div class="max-w-screen-md mx-auto grid grid-cols-3 gap-6">
+      {projects.map((project) => <Card {...project} />)}
+    </div>
+    <About />
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,7 +1,7 @@
 ---
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
+import Navbar from "../components/Navbar.astro";
 import About from "../components/About.astro";
 import Footer from "../components/Footer.astro";
 import Card from "../components/Card.astro";
@@ -33,7 +33,7 @@ const projects = [
 ---
 
 <Layout>
-  <Header />
+  <Navbar />
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
     <div class="flex flex-col md:flex-row m-10 p-6 gap-8 justify-center items-center h-auto md:h-96">
       <img
@@ -57,7 +57,7 @@ const projects = [
     </div>
     <hr id="projects" class="border-gray-900 w-10/12 mx-auto mt-2 mb-12" />
     <h1
-      class="mt-6 mb-5 text-center text-3xl font-bold text-blue-400 text-opacity-50"
+      class="mb-6 text-3xl text-center font-bold text-blue-400 text-opacity-50"
     >
       Projects
     </h1>
